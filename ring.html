@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Marbella Shine</title>
+
+    <!-- เรียกใช้ Font Awesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+            position: relative;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .icon-group {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .icon-group a {
+            color: #333;
+            font-size: 20px;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .icon-group a:hover {
+            color: #e91e63;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: black;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('Gemini_Generated_Image_osmce3osmce3osmc.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-menu {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-menu a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .product-menu a:hover {
+            color: #ff6600;
+        }
+
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .product-card {
+            width: 250px;
+            background-color: #fff;
+            border: none;
+            border-radius: 12px;
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: #777;
+            margin: 10px 0;
+            min-height: 60px;
+        }
+
+        .product-prices {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .price-new {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .discount-badge {
+            color: #fff;
+            background-color: red;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .product-price {
+            color: #e91e63;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .view-button {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background-color: #e91e63;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-button:hover {
+            background-color: #c2185b;
+        }
+
+        .contact {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .icon-group a.signup-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            padding: 5px 12px;
+            border: 1px solid #e91e63;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .icon-group a.signup-btn:hover {
+            background-color: #e91e63;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        Marbella Shine
+        <div class="icon-group">
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="#" class="signup-btn"><i class="fa-regular fa-user"></i> สมัครสมาชิก</a>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="product-menu">
+        <a href="index.html">หน้าแรก</a>
+        <a href="necklace.html">สร้อยคอ</a>
+        <a href="Bracelet.html">สร้อยข้อมือ</a>
+        <a href="ring.html">แหวน</a>
+        <a href="earring.html">ต่างหู</a>
+        <a href="Bestsellingproducts.html">สินค้าขายดี</a>
+    </div>
+
+    <!-- สินค้า -->
+    <div class="product-section">
+
+        <div class="product-card">
+            <img src="./ring1-1.jpg" alt="สินค้า 1">
+            <div class="product-name">Moon Kiss</div>
+            <div class="product-desc">(Silver 92.5) เป็นแหวนคู่ที่สื่อถึงความสงบ อ่อนโยน มั่นคง ความโรแมนติกในยามค่ำคืน</div>
+            <div class="product-prices">
+                <div class="product-price">฿1,180</div>
+                
+            </div>
+            <a href="product11.html" class="view-button">ดูสินค้า</a>
+        </div>
+
+        <div class="product-card">
+            <img src="./ring2-1.jpg" alt="สินค้า 2">
+            <div class="product-name">Beloved</div>
+            <div class="product-desc">(Silver 92.5) ความรักที่เชื่อมโยงกัน เหมือนแหวนที่โอบล้อมนิ้ว เปรียบเสมือนคำมั่นสัญญาแห่งความรัก</div>
+            <div class="product-price">฿499</div>
+            <a href="product12.html" class="view-button">ดูสินค้า</a>
+        </div>
+
+
+          <div class="product-card">
+            <img src="./ring3-1.jpg" alt="สินค้า 2">
+            <div class="product-name">Permise</div>
+            <div class="product-desc">(Silver 92.5) เป็นแหวนคู่ที่สื่อถึง ความซื่อสัตย์ในความรัก และความตั้งใจที่จะอยู่เคียงข้างกันเสมอ</div>
+            <div class="product-price">฿599</div>
+            <a href="product13.html" class="view-button">ดูสินค้า</a>
+        </div>
+
+       
+
+        <div class="product-card">
+            <img src="./ring4-1.jpg" alt="สินค้า 4">
+            <div class="product-name">Seren</div>
+            <div class="product-desc">(Silver 92.5) เป็นแหวนคู่ที่สื่อถึง ความซื่อสัตย์ในความรัก คู่รักที่เปล่งประกายอยู่เคียงข้างกัน</div>
+            <div class="product-price">฿599</div>
+            <a href="product14.html" class="view-button">ดูสินค้า</a>
+        </div>
+
+        <div class="product-card">
+            <img src="./ring5-1.jpg" alt="สินค้า 5">
+            <div class="product-name">Luv lex</div>
+            <div class="product-desc">(Silver 92.5) เป็นแหวนคู่ที่สื่อถึง ความซื่อสัตย์ในความรัก สัญญาลักษณ์ของความรัก ความเข้าใจ ไม่หวือหวา</div>
+            <div class="product-price">฿799</div>
+            <a href="product15.html" class="view-button">ดูสินค้า</a>
+        </div>
+
+    </div>
+
+    <div class="contact">
+        <p>📞 โทร: 081-234-5678</p>
+        <p>📧 อีเมล: myshop@email.com</p>
+        <p>📱 Line: @myshop</p>
+        <p>📍 ที่อยู่: 123 ถนนตัวอย่าง กรุงเทพฯ</p>
+    </div>
+
+</body>
+</html>
